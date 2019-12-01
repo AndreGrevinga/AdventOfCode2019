@@ -8,12 +8,20 @@ inputs = [73617, 104372, 131825, 85022, 105514, 78478, 87420, 118553, 97680, 894
           74612,
           136820, 96212, 132002, 97405, 82629, 63717, 62805, 112693, 147810, 139827, 116220, 69711, 50236, 137833,
           103743, 147456, 112098, 84867, 75615, 132738, 81072, 89444, 58443, 94465, 112494, 82127, 132533]
-total = 0
-for number in inputs:
-    subTotal = 0
-    fuel = int(number / 3) - 2
-    while fuel > 0:
-        subTotal = subTotal + fuel
-        fuel = int(fuel / 3) - 2
-    total += subTotal
-print total
+def partOne():
+    total = 0
+    for number in inputs:
+        total = total + (int(number / 3) - 2)
+    return total
+
+def partTwo():
+    total = 0
+    for number in inputs:
+        subTotal = 0
+        fuel = int(number / 3) - 2
+        while fuel > 0:
+            subTotal = subTotal + fuel
+            fuel = int(fuel / 3) - 2
+        total += subTotal
+    return total
+print partOne(), partTwo()
