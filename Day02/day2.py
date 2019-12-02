@@ -5,13 +5,15 @@ input = [1, 12, 2, 3, 1, 1, 2, 3, 1, 3, 4, 3, 1, 5, 0, 3, 2, 9, 1, 19, 1, 19, 5,
          2, 123, 10, 127, 1, 6, 127, 131, 2, 131, 13, 135, 1, 13, 135, 139, 1, 9, 139, 143, 1, 9, 143, 147, 1, 147, 13,
          151, 1, 151, 9, 155, 1, 155, 13, 159, 1, 6, 159, 163, 1, 13, 163, 167, 1, 2, 167, 171, 1, 171, 13, 0, 99, 2, 0,
          14, 0]
-for i in range(0, len(input)-1, 4):
-    if input[i] == 1:
-        input[input[i+3]] = input[input[i+1]] + input[input[i+2]]
-    else:
-        if input[i] == 2:
-            input[input[i+3]] = input[input[i+1]] * input[input[i+2]]
+def partOne()
+    for i in range(0, len(input)-1, 4):
+        if input[i] == 1:
+            input[input[i+3]] = input[input[i+1]] + input[input[i+2]]
         else:
-            if input[i] == 99:
-                break
-print(input[0])
+            if input[i] == 2:
+                input[input[i+3]] = input[input[i+1]] * input[input[i+2]]
+            else:
+                if input[i] == 99:
+                    break
+    print(input[0])
+def partTwo()
